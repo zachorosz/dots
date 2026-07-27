@@ -1,0 +1,3 @@
+export HISTFILE=$XDG_DATA_HOME/.zhistory
+export SAVEHIST=10000
+export HISTSIZE=50000
