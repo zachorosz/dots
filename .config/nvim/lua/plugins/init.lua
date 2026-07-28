@@ -1,0 +1,5 @@
+require("plugins.blink")
+require("plugins.conform")
+require("plugins.telescope")
+require("plugins.treesitter")
+require("plugins.theme")
