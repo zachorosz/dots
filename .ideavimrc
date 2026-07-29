@@ -1,0 +1,70 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+set scrolloff=8
+
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+
+let mapleader=" "
+
+" Center screen when jumping to next search match
+nnoremap n nzz
+nnoremap N Nzz 
+
+" Center screen when moving up and down (Fixed typo from  to )
+nnoremap  zz
+nnoremap  zz 
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
+nnoremap <Leader>en :action EditSourceInNewWindow<CR>
+nnoremap <Leader>n :action NextWindow<CR>
+
+nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <Leader>qa :action CloseAllEditors<CR>
+
+set ideajoin
+set idearefactormode=keep
+
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" Move selected lines up and down smoothly with proper auto-indentation
+vnoremap J :m '>+1gv=gv
+vnoremap K :m '<-2gv=gv
+
+" Reformat code
+nnoremap <leader>= :action ReformatCode<CR>
+
+" Code refactoring and navigation
+nnoremap grn :action RenameElement<CR>
+nnoremap gra :action ShowIntentionActions<CR>
+"nnoremap gra :action Refactorings.QuickListPopupAction<CR>
+nnoremap gr  :action ShowUsages<CR>
+nnoremap gd  :action GotoDeclaration<CR> 
+nnoremap gi  :action GotoImplementation<CR> 
+
+" Diagnostics (Errors and warnings)
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR> 
+
+" Debugging
+nnoremap <leader>d :action Debug<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+
