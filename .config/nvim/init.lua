@@ -3,7 +3,7 @@ vim.g.maplocalleader = "\\"
 
 vim.opt.guicursor = "" -- block cursor
 vim.opt.number = true
---vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 vim.opt.scrolloff = 8 -- number of lines above/below cursor
 vim.opt.wrap = false
 
