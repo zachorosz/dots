@@ -46,8 +46,8 @@ nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 
 " Move selected lines up and down smoothly with proper auto-indentation
-vnoremap J :m '>+1gv=gv
-vnoremap K :m '<-2gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Reformat code
 nnoremap <leader>= :action ReformatCode<CR>
