@@ -1,3 +1,7 @@
-export HISTFILE=$XDG_DATA_HOME/.zhistory
-export SAVEHIST=10000
-export HISTSIZE=50000
+HISTFILE=$XDG_DATA_HOME/.zhistory
+# Maximum lines kept in memory
+export HISTSIZE=100000
+# Maximum lines saved to $HISTFILE
+export SAVEHIST=100000
+# Like INC_APPEND_HISTORY + re-read history whenever accessing it
+setopt SHARE_HISTORY
